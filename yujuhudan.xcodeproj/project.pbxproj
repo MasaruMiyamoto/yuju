@@ -403,7 +403,7 @@
 				44AE12051B410FB600ED4A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		44AE12061B410FB600ED4A82 /* Build configuration list for PBXNativeTarget "yujuhudan" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +412,7 @@
 				44AE12081B410FB600ED4A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		44AE12091B410FB600ED4A82 /* Build configuration list for PBXNativeTarget "yujuhudanTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				44AE120B1B410FB600ED4A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

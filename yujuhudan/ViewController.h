@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource,UIAlertViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tv;
+
+@property NSMutableArray *cells;
+
+- (IBAction)insertCell:(id)sender;
+- (IBAction)deleteAll:(id)sender;
 
 @end
 
