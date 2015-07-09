@@ -31,7 +31,7 @@
 
 - (IBAction)insertCell:(id)sender
 {
-    [self alertTest];
+    [self setAlert];
     
 }
 
@@ -60,10 +60,17 @@
     return tvcell;
 }
 
-- (void)alertTest
+- (void)setAlert
 {
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"入力してください" message:nil delegate:self cancelButtonTitle:@"CANCEL" otherButtonTitles:@"OK", nil];
     [message setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [message show];
+}
+
+- (void)dicisionAlert
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"この優柔普段\nやろうが！！" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//    [message setAlertViewStyle:UIAlertViewStylePlainTextInput];
     [message show];
 }
 
@@ -88,4 +95,25 @@
         [self.tv reloadData];
     }
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        // 削除するコードを挿入します
+        
+        NSInteger row = [indexPath row];
+        [self.cells removeObjectAtIndex: row];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]  withRowAnimation:UITableViewRowAnimationFade];
+        
+    }
+}
+
+- (IBAction)btn:(id)sender {
+    [self dicisionAlert];
+}
+
+
 @end
