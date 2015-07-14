@@ -23,9 +23,9 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPJ-5D-cVU">
                                 <rect key="frame" x="16" y="458" width="288" height="102"/>
-                                <color key="backgroundColor" red="0.82846715328467158" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.23446053832116789" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="31"/>
-                                <state key="normal" title="決められないよぉ〜">
+                                <state key="normal" title="決めまっせ！">
                                     <color key="titleColor" red="0.70936650820000002" green="0.31192599570000001" blue="0.096106504750000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -33,10 +33,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeg-ZD-rcY">
-                                <rect key="frame" x="29" y="375" width="120" height="75"/>
-                                <color key="backgroundColor" red="0.82846715328467158" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="375" width="140" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.23446053832116789" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="追加">
+                                <state key="normal" title="増やすで">
                                     <color key="titleColor" red="0.70936650820000002" green="0.31192599570000001" blue="0.096106504750000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,10 +45,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXM-QV-Zg9">
-                                <rect key="frame" x="172" y="375" width="120" height="75"/>
-                                <color key="backgroundColor" red="0.82846715328467158" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="164" y="375" width="140" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.23446053832116789" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="全削除">
+                                <state key="normal" title="全消すで">
                                     <color key="titleColor" red="0.70936650820000002" green="0.31192599570000001" blue="0.096106504750000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

@@ -120,7 +120,7 @@
 
 - (void)setAlert
 {
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"入力してください" message:nil delegate:self cancelButtonTitle:@"CANCEL" otherButtonTitles:@"OK", nil];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"なんか入れるんか？" message:nil delegate:self cancelButtonTitle:@"CANCEL" otherButtonTitles:@"OK", nil];
     [message setAlertViewStyle:UIAlertViewStylePlainTextInput];
     [message show];
     
