@@ -8,6 +8,11 @@
 
 #import "ViewController.h"
 
+
+//RGB 256変換
+#define RGB(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+
+
 @interface ViewController ()
 
 @end
@@ -44,14 +49,18 @@
 
 
 //セルの更新
-- (void)updateCell:(UITableView *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)updateCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     //Update Cells
-    cell.backgroundColor = [UIColor colorWithRed:0.39 green:0.73 blue:0.3 alpha:1.0];
-//    cell.backgroundColor = [UIColor colorWithRed:99 green:0 blue:76 alpha:1.0];
-//    cell.backgroundColor = [UIColor redColor];
+    if(indexPath.row % 2 == 0){
+        cell.backgroundColor = RGB(99, 220, 76);
+    }else{
+        cell.backgroundColor = RGB(152, 206, 0);
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
+//表示されているセルの更新メソッド
 - (void)updateVisibleCells
 {
     NSLog(@"visible update");
@@ -92,22 +101,22 @@
         [self.cells removeObjectAtIndex: row];
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]  withRowAnimation:UITableViewRowAnimationFade];
-        
+        [self updateVisibleCells];
     }
 }
 
 //セルの背景色の変更
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"colorChange");
-    if(indexPath.row % 2 == 0){
-        cell.backgroundColor = [UIColor redColor];
-        //        cell.backgroundColor = [UIColor colorWithRed:99 green:188 blue:76 alpha:1.0];
-    }else{
-                cell.backgroundColor = [UIColor whiteColor];
-    }
-    //    cell.backgroundColor = self.tv.backgroundColor;
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"colorChange");
+//    if(indexPath.row % 2 == 0){
+//        cell.backgroundColor = [UIColor redColor];
+//        //        cell.backgroundColor = [UIColor colorWithRed:99 green:188 blue:76 alpha:1.0];
+//    }else{
+//                cell.backgroundColor = [UIColor whiteColor];
+//    }
+//    //    cell.backgroundColor = self.tv.backgroundColor;
+//}
 
 - (void)setAlert
 {
@@ -117,12 +126,7 @@
     
 }
 
-- (void)dicisionAlert
-{
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"この優柔普段\nやろうが！！" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-//    [message setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [message show];
-}
+
 
 - (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
 {
@@ -151,8 +155,34 @@
 
 
 - (IBAction)btn:(id)sender {
-    [self dicisionAlert];
+    
+    [self selectAlert:(int)[self.cells count]];
+    
 }
 
+//結果の表示
+- (void)selectAlert:(int)x
+{
+    UIAlertView *message;
+    if(x == 0){
+
+        message = [[UIAlertView alloc] initWithTitle:@"何かいれろや！！！" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        
+    }else if(x == 1){
+        //ランダム値の決定
+        int random = arc4random() % x;
+        
+        NSString *str = [self.cells objectAtIndex:random];
+        message = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@\nしかねーじゃねーか！！！",str] message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }else{
+        //ランダム値の決定
+        int random = arc4random() % x;
+        
+        NSString *str = [self.cells objectAtIndex:random];
+        message = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"お前が欲しいのは\n%@ だ！！！",str] message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    //    [message setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [message show];
+}
 
 @end

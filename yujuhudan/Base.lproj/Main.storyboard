@@ -59,6 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.38967993951612906" green="0.73752520161290325" blue="0.29744203629032256" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tv" destination="4Vw-Fs-els" id="Dwu-ui-4w3"/>
                     </connections>
